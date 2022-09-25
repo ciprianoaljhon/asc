@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    #text-logo{
+        font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Haettenschweiler;
+    }
+
+    .nav-items{
+        @apply flex flex-col gap-4 items-center
+        absolute top-14 left-0 w-full text-xl tracking-widest font-medium
+    }
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.clicked-menu{
+    
+}
