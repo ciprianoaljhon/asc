@@ -414,6 +414,10 @@ video {
   font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Haettenschweiler;
 }
 
+.filtered{
+  filter: invert(96%) sepia(46%) saturate(5270%) hue-rotate(114deg) brightness(110%) contrast(112%);
+}
+
 .nav-items {
   position: absolute;
   top: 3.5rem;
@@ -426,7 +430,19 @@ video {
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 500;
-  letter-spacing: 0.1em;
+  letter-spacing: 0em;
+}
+
+/* Cascade - Cannot override height on html file*/
+
+[data-override="height"] {
+  height: 3rem;
+}
+
+/* Override height */
+
+.show-nav {
+  height: 15rem;
 }
 
 *, ::before, ::after {
@@ -594,8 +610,12 @@ video {
   display: flex;
 }
 
-.h-1\/2 {
-  height: 50%;
+.h-12 {
+  height: 3rem;
+}
+
+.h-60 {
+  height: 15rem;
 }
 
 .w-full {
@@ -669,8 +689,8 @@ video {
   font-weight: 500;
 }
 
-.tracking-widest {
-  letter-spacing: 0.1em;
+.tracking-normal {
+  letter-spacing: 0em;
 }
 
 .text-gray-300 {
@@ -692,6 +712,15 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.sepia {
+  --tw-sepia: sepia(100%);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .duration-500 {
   transition-duration: 500ms;
 }
@@ -704,5 +733,4 @@ body{
   font-family: 'Courier New', Courier, monospace;
 }
 
-.clicked-menu{
-}
+/* Transition, Effects and Animation */

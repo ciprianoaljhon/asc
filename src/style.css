@@ -7,16 +7,29 @@
         font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Haettenschweiler;
     }
 
+    .filtered{
+        filter: invert(96%) sepia(46%) saturate(5270%) hue-rotate(114deg) brightness(110%) contrast(112%);
+    }
+
     .nav-items{
         @apply flex flex-col gap-4 items-center
-        absolute top-14 left-0 w-full text-xl tracking-widest font-medium
+        absolute top-14 left-0 w-full text-xl tracking-normal font-medium
+    }
+
+    /* Cascade - Cannot override height on html file*/
+    [data-override="height"]{
+        @apply h-12
+    }   
+    /* Override height */
+    .show-nav{
+        @apply h-60
     }
 }
+
 
 body{
     font-family: 'Courier New', Courier, monospace;
 }
 
-.clicked-menu{
-    
-}
+
+/* Transition, Effects and Animation */
